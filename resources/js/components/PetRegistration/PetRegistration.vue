@@ -228,6 +228,15 @@ const submitForm = async () => {
             });
             const data = await response.json();
             console.log('Success:', data);
+            // Reset the form after successful submission
+            form.value = {
+                name: '',
+                type: '',
+                breed: '',
+                breedDetail: '',
+                gender: '',
+                mixDetail: '',
+            };
         } else {
             console.error('Invalid token');
         }
